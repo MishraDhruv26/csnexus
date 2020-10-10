@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    {% block head %}
+    {% endblock %}
+    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+</head>
+<style type="text/css">
+h1 {
+        text-align: center;
+        color: #efefef;
+        padding-bottom: 10px;
+    }
+
+    h1::after {
+        content: '';
+        background: aqua;
+        display: block;
+        height: 3px;
+        width: 170px;
+        margin: 20px auto 5px;
+
+    }
+/* <!----------NavigationBar-------> */
+
+    #nav-bar {
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+
+    .navbar-nav li {
+        padding: 0 10px;
+    }
+
+    .navbar-nav h2 {
+        color: aliceblue;
+    }
+
+    .navbar-nav li a {
+        float: right;
+        text-align: left;
+
+    }
+
+    #nav-bar ul li a:hover {
+        color: aqua !important;
+    }
+
+    .navbar-brand img {
+        height: 100px;
+        width: 100px;
+        align-self: baseline;
+    }
+
+    .navbar {
+
+        background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+        /* https://cdn.pixabay.com/photo/2017/10/18/22/35/black-2865772_960_720.jpg */
+        background-size: cover;
+        background-position: center;
+        color: #efef;
+        background-attachment: fixed;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
+    }
+
+    .navbar-toggler {
+        border: none !important;
+    }
+
+    .nav-link {
+        color: #efef !important;
+        font-weight: 600;
+        font-size: 16px;
+
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+        /* background-color: #1C1E20; */
+        background-size: cover;
+        background-position: center;
+        color: #efef;
+        background-attachment: fixed;
+
+
+    }
+    
+</style>
+{% block css %}{% endblock %}
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand navbar-nav h2" href="/#about">
+                <h2>C.S.N(exus)</h2>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/#about">ABOUT US</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/#services">SERVICES</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="/#slider">SIGN-UP or LOGIN</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="/#contact">CONTACT US</a>
+                    </li>
+                    {% block navbar %}{% endblock %}
+                </ul>
+            </div>
+        </nav>
+    </section>
+    {% block body %}{% endblock %}
+    <!-- footer -->
+    {% block js %}{% endblock %}
+    </body>

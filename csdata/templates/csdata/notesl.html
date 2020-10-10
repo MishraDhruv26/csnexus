@@ -1,0 +1,240 @@
+{% extends 'csdata/basic.html' %}
+{% block head %}
+<title>Notes - CsN(exus)</title>
+{% endblock %}
+{% block css %}
+<style type="text/css">
+    #boxes {
+        width: auto;
+        padding: 5px;
+        position: relative;
+        margin: 15px;
+        text-align: center;
+        background-color: #3df875;
+        /* background: linear-gradient(aqua, #1efff4); */
+
+        transition: 0.5s;
+    }
+
+    #boxes h6 {
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    #boxes:hover {
+        margin: 10px;
+        transition: 0.5s;
+        box-shadow: 0 4px 4px 0 rgb(0, 0, 0), 0 4px 10px 0 #3df875;
+    }
+
+    #boxes2 {
+        width: auto;
+        padding: 5px;
+        position: relative;
+        margin: 15px;
+        text-align: center;
+        background-color: #ff71c4;
+        /* background: linear-gradient(rgb(255, 157, 0), #f8a41d); */
+
+        transition: 0.5s;
+    }
+
+    #boxes2 h6 {
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    #boxes2:hover {
+        margin: 10px;
+        transition: 0.5s;
+        box-shadow: 0 4px 4px 0 rgb(0, 0, 0), 0 4px 10px 0 #ff71c4;
+    }
+
+    #boxes3 {
+        width: auto;
+        padding: 5px;
+        position: relative;
+        margin: 15px;
+        text-align: center;
+        background-color: #4efff0;
+        /* background: linear-gradient(rgb(0, 255, 34), #01fb16); */
+
+        transition: 0.5s;
+    }
+
+    #boxes3 h6 {
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    #boxes3:hover {
+        margin: 10px;
+        transition: 0.5s;
+        box-shadow: 0 4px 4px 0 rgb(0, 0, 0), 0 4px 10px 0 #4efff0;
+    }
+
+    #boxes4 {
+        width: auto;
+        padding: 5px;
+        position: relative;
+        margin: 15px;
+        text-align: center;
+        background-color: #fff34b;
+        /* background: linear-gradient(aqua, #1efff4); */
+
+        transition: 0.5s;
+    }
+
+    #boxes4 h6 {
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    #boxes4:hover {
+        margin: 10px;
+        transition: 0.5s;
+        box-shadow: 0 4px 6px 0 rgb(0, 0, 0), 0 6px 15px 0 #fff34b;
+    }
+
+    #combox {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: linear-gradient(rgba(0, 255, 255, 0.418), #1d15226b);
+        box-shadow: 0 4px 10px 0 rgb(0, 0, 0), 0 2px 2px 0 rgba(248, 246, 246, 0.959);
+
+    }
+</style>
+{% endblock %}
+
+{% block navbar %}
+<li class="nav-item">
+    <a class="nav-link " href={% url 'logout' %}>
+      <button type="button" class="btn btn-outline-warning">Logout</button>
+    </a>
+  </li>
+{% endblock %}
+{% block body %}
+<section id="">
+    <div class="container card bg-transparent" id="combox">
+        <h1>First Semester</h1>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes">
+                <a href="https://drive.google.com/folderview?id=1XKvzcEYRqBRpQUJGx3AGRA_ZNrxJwICi" target="_blank"><h6>Basic Electronics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/folderview?id=1eifGrV95CB_2rae3FkhJxMemW9RVebVB" target="_blank"><h6>Physics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/folderview?id=18XKsaP8WBW50IFM_NhmLbM5GnKkz0Rf0" target="_blank"><h6>Maths</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <a href="https://drive.google.com/folderview?id=1KoBQsOl2vqqnolaNQ90jHHSqRt5Qlell" target="_blank"><h6>Manufacturing</h6></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/folderview?id=167kyADbgEfMuV_VyvQykPUF-b_6IjxOC" target="_blank"><h6>Economics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/folderview?id=1luswm5NPJg--T1Di7HmKUNRaSaFVFXsA" target="_blank"><h6>Environmental Science</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <a href="https://drive.google.com/file/d/1A8C6_6xY2nQamx8cyUq8ARwv76gJiLqV/view?usp=drivesdk" target="_blank"><h6>Engineering Drawings</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes">
+                <a href="https://drive.google.com/folderview?id=1L7DUW-Y89kkRejWXfQLFxCZgCnYsTckT" target="_blank"><h6>Physics Practical</h6></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/file/d/10ufpiOnw5SpCZp7sOdKhl9NYzmcqw0nB/view?usp=drivesdk" target="_blank"><h6>Basic Electronic Practical</h6></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container card bg-transparent" id="combox">
+        <h1>Second Semester</h1>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes">
+
+                <a href="https://drive.google.com/folderview?id=1X9B2e048rgN_9dSphHBO3KO0xwJB8BzK" target="_blank"><h6>Basic Electrical</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/folderview?id=1iVsAIFyokx8FPO-v9qSqq8R9jvtH2dja" target="_blank"><h6>Physics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/file/d/1YZOCsLW-Ous4q4UXrgUy-vOOYJl7n21c/view?usp=sharing" target="_blank"><h6>Maths</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <a href="https://drive.google.com/folderview?id=1z-xs_h5860851TPPUiSUTmsRnXLogGa9" target="_blank"><h6>Mechanics</h6></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/folderview?id=1GIaa4fc9hYLGOAvi2amsT4fBl-qiQJa-" target="_blank"><h6>C Language</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/folderview?id=1VVJKrPZVn8vgmJXZNuQoMU8NkSWXXnkK" target="_blank"><h6>Chemistry</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <a href="https://drive.google.com/folderview?id=1BPdyd7afeRlP-Io4U7K4M4UrNteRYYkn" target="_blank"><h6>English</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes">
+                <a href="https://drive.google.com/file/d/1OgDUyKhc54t0odsSVPn1phFrlsoKu7oU/view?usp=drivesdk" target="_blank"><h6>Basic Electrical Practical</h6></a>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <h6>Basic Electronic Practical</h6>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="container card bg-transparent" id="combox">
+        <h1>Third Semester</h1>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes">
+
+                <a href="https://drive.google.com/drive/folders/1_C7bmQoB_1N_KcPwgy9K7Xo0GQKlX3Ti?usp=sharing" target="_blank"><h6>Discrete Mathematics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/drive/folders/1gUn9JgBDT7gOTXXTa8h_wSLlDKHCenya?usp=sharing" target="_blank"><h6>C++ and OOPs</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <a href="https://drive.google.com/drive/folders/1y6G1HHIaG1MpF1FM7HBJzP16W5ossRiz?usp=sharing" target="_blank"><h6>Digital Electronics</h6></a>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <a href="https://drive.google.com/drive/folders/13UjZaEz5eK2H08-afbsrtVMIOkbaYX1y?usp=sharing" target="_blank"><h6>Analog Electronics</h6></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes2">
+                <a href="https://drive.google.com/drive/folders/191V9F5Z0XxBHCZ4vH7r772l8v9s5G3cC?usp=sharing" target="_blank"><h6>Data Structure</h6></a>
+            </div>
+            <!-- <div class="col-md-2 mx-auto card " id="boxes3">
+                <h6>Environmental Science</h6>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes4">
+                <h6>Engineering Drawings</h6>
+            </div>
+            <div class="col-md-2 mx-auto card " id="boxes">
+                <h6>Physics Practical</h6>
+            </div> -->
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-2 mx-auto card " id="boxes3">
+                <h6>Basic Electronic Practical</h6>
+            </div>
+        </div> -->
+    </div>
+</section>
+{% endblock %}

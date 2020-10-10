@@ -1,0 +1,213 @@
+{% extends 'csdata/basic.html' %}
+{% block head %}
+<title>Login/Resister - CsN(exus)</title>
+{% endblock %}
+{% block css %}
+<style type="text/css">
+    h1 {
+        text-align: center;
+        color: #efefef;
+        padding-bottom: 10px;
+    }
+
+    h1::after {
+        content: '';
+        background: aqua;
+        display: block;
+        height: 3px;
+        width: 170px;
+        margin: 20px auto 5px;
+
+    }
+
+
+
+
+
+    .box {
+        width: 380px;
+        padding: 40px;
+        height: 500px;
+        position: relative;
+        /* top:50%; */
+        /* left: 50%; */
+        margin-top: 10px;
+        /* transform: translate(-50%,-50%); */
+        /* background: #191919; */
+        text-align: center;
+        overflow: hidden;
+
+    }
+
+    .input-group {
+        /* top: 180px; */
+        position: absolute;
+        width: 280px;
+        transition: .5s;
+    }
+
+    @media screen and (max-width: 700px) {
+        .box {
+            margin: 40px;
+
+        }
+    }
+
+    .box {
+        background: linear-gradient(rgb(42, 42, 42), #1D2022);
+
+        /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0),
+            0 2px 2px rgba(0, 0, 0, 0),
+            0 4px 4px rgba(0, 0, 0, 0),
+            0 8px 8px rgba(0, 0, 0, 0),
+            0 16px 16px rgba(0, 0, 0, 0); */
+        box-shadow: 0 4px 10px 0 rgb(0, 0, 0), 0 2px 2px 0 rgba(248, 246, 246, 0.959);
+
+    }
+
+    /* .box:hover {
+        background: linear-gradient(rgb(119, 243, 3), rgb(172, 228, 120));
+        
+    } */
+
+    .box h2 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .box input[type="text"],
+    .box input[type="password"],
+    .box input[type="email"] {
+        /* border-width: 6px; */
+        background: none;
+        display: block;
+        margin: 12px auto;
+        text-align: center;
+        border: 3px solid aqua;
+        padding: 10px 10px;
+        width: 270px;
+        outline: none;
+        color: #7ce724 !important;
+        border-radius: 24px;
+        transition: 0.5s;
+
+    }
+
+    .box input[type="text"]:focus,
+    .box input[type="password"]:focus,
+    .box input[type="email"]:focus {
+        width: 300px;
+        border-color: #83FC42;
+
+    }
+
+    .box input[type="submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid aqua;
+        padding: 14px 40px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.5s;
+        cursor: pointer;
+        color: white;
+        font-family: cursive;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .box input[type="submit"]:hover {
+        background: aqua;
+        width: 300px;
+
+
+    }
+
+    #login {
+        left: 50px;
+    }
+
+    #register {
+        left: 450px;
+    }
+</style>
+{% endblock %}
+
+
+{% block body %}
+<section id="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto card bg-transparent" style="margin-top: 10px; padding: 40px; border: none;">
+                <span id="logreg">
+                    <h2 class="card-title" style="color: aqua;">New to CsN(exus)? Register Here<i
+                            class="fa fa-arrow-circle-down" style="font-size:24px color=#fa0202;"></i></h2>
+                    <button type="button" onclick='register()' class="btn btn-outline-warning" style='border-radius:10px;'>Sign-Up</button>
+                </span>
+                <!-- <Button class="btn-4" onclick='register()'>
+                Register
+            </Button> -->
+
+            </div>
+            
+            <div class="col-md-6 mx-auto card bg-transparent" style="border: none;">
+                <div class="box animate__animated animate__pulse">
+                    <form method="post" action="{% url 'login' %}"class="input-group " id="login">
+                        {% csrf_token %}
+                        <h2>Login</h2>
+                        <input type="email" name="email" placeholder="Enter email" required>
+                        <input type="password" name="pass" placeholder="Enter password" required>
+                        <input type="submit" value="Login">
+                    </form>
+                    <form method="post" action="{% url 'register' %}" class="input-group " id="register">
+                        {% csrf_token %}
+
+                        <h2>Sign-Up</h2>
+                        <input type="text" name="rname" placeholder="Enter Your Name" required>
+                        <input type="email" name="remail" placeholder="Enter email" required>
+                        <input type="text" name="rollno" placeholder="Enter Your RollNo(Optional)">
+                        <input type="password" name="rpass" placeholder="Enter password" required>
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    var l = document.getElementById('login');
+    var r = document.getElementById('register');
+    var b = document.getElementById('logreg')
+    function register() {
+        l.style.left = "-400px";
+        r.style.left = "50px";
+        r.className += " animate__animated animate__pulse";
+        b.innerHTML = "<h2 class='card-title' style='color: aqua;'>Already a Member! Log In "
+            + "<i class='fa fa-arrow-circle-down' style='font-size:35px'></i></h2><button type='button' onclick='login()' class='btn btn-outline-warning' style='border-radius:10px;'>Login</button>";
+        $('#login').removeClass('animate__animated animate__pulse');
+    }
+    function login() {
+        l.style.left = "50px";
+        r.style.left = "450px";
+        l.className += " animate__animated animate__pulse"
+        b.innerHTML = "<h2 class='card-title' style='color: aqua;'>New to CsN(exus)? Register Here "
+            + "<i class='fa fa-arrow-circle-down' style='font-size:35px'></i></h2><button type='button' onclick='register()' class='btn btn-outline-warning' style='border-radius:10px;'>Sign-Up</button>";
+
+        $('#register').removeClass('animate__animated animate__pulse');
+    }
+</script>
+{% endblock %}

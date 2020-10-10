@@ -1,0 +1,600 @@
+<html>
+
+<head>
+  <title>CSN</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+  </script>
+
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+
+  }
+
+  p {
+    line-height: 2.5rem;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    color: #efefef;
+    padding-bottom: 10px;
+  }
+
+  h1::after {
+    content: '';
+    background: aqua;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+
+  }
+
+  /* Navigation Bar */
+
+  #nav-bar {
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+  }
+
+
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+
+  .navbar-nav h2 {
+    color: aliceblue;
+  }
+
+  .navbar-nav li a {
+    float: right;
+    text-align: left;
+  }
+
+  #nav-bar ul li a:hover {
+    color: aqua !important;
+  }
+
+  .navbar-brand img {
+    height: 100px;
+    width: 100px;
+    align-self: baseline;
+  }
+
+  .navbar {
+
+    background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    color: #efef;
+    background-attachment: fixed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+  }
+
+  .navbar-toggler {
+    border: none !important;
+  }
+
+  .nav-link {
+    color: #efef !important;
+    font-weight: 600;
+    font-size: 16px;
+
+  }
+
+  #slider {
+    width: 100%;
+  }
+
+  /* .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial !important;
+  }
+
+  .carousel-caption h5 {
+    color: #efefef;
+    font-size: 42px;
+
+  } */
+
+  .carousel-item img {
+    height: 600px;
+    width: 1400px;
+  }
+
+  /*-------------ABOUT US -----------*/
+  #about {
+
+    background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    color: #efef;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  }
+
+  .about {
+    margin-top: 40px;
+
+
+
+  }
+
+  .para {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 12px 48px;
+  }
+
+  /*------------OUR SERVICES---------*/
+
+  #services {
+    background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    color: #efef;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  }
+
+  .services {
+    margin-top: 40px;
+
+
+
+  }
+
+  #services p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+  }
+
+  .buttonl {
+    margin: 10px;
+    width: 30%;
+    top: -3rem;
+    left: 0rem;
+    border-radius: 50px;
+    color: #69e7d0;
+    border-color: aqua;
+  }
+
+  .buttonl:hover {
+    background: rgb(190, 228, 228);
+    transition: 1s;
+    color: #000;
+  }
+
+  .button2 {
+
+    width: 30%;
+    top: -3rem;
+    left: 39rem;
+    color: aqua;
+    border-color: aqua;
+
+    border-radius: 50px;
+
+  }
+
+  .button2:hover {
+    background: #a8f16c;
+    transition: 1s;
+    color: #000;
+  }
+
+  .btn {
+    border-radius: 20px;
+  }
+
+  /*---------------COTACT US-------------*/
+  #contact {
+    /*    background: #efefef;*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #777
+  }
+
+  #contact {
+    background-image: linear-gradient(rgba(51, 55, 56, 0.575), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/black-dark-3d-low-poly-geometric-background_79145-393.jpg?size=626&ext=jpg);
+
+    background-size: cover;
+    background-position: center;
+    color: #efef;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-control {
+    border-radius: 10px !important;
+    border: none;
+  }
+
+  .form-control:hover {
+    background-color: aqua;
+    color: rgb(42, 42, 42);
+    transition: 0.5s;
+  }
+
+  ::placeholder {
+    color: #000 !important;
+
+  }
+
+  .follow {
+    border-radius: 10px !important;
+    background: #efef;
+    color: #000;
+    padding: 10px;
+    margin: 15px;
+  }
+
+
+  /*------footer-----*/
+  #footer {
+    background: #333;
+    color: #fff;
+  }
+
+  .fa-heart-o {
+    margin: 3px;
+    color: red;
+  }
+</style>
+<meta charset="utf-8">
+
+<body>
+
+
+  <!-------navigation bar------>
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-sm navbar-light justify-content-center">
+      <a class="navbar-brand navbar-nav h2" href="#">
+        <h2>C.S.N(exus)</h2>
+
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="#about">ABOUT US</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#contact">CONTACT US</a>
+          </li>
+          {% if login %}
+          <li class="nav-item">
+            <a class="nav-link " href={% url 'logout' %}>
+              <button type="button" class="btn btn-outline-warning">Logout</button>
+            </a>
+          </li>
+
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link " href={% url 'login' %}>
+              <button type="button" class="btn btn-outline-warning">SIGN UP/LOG-IN</button>
+            </a>
+          </li>
+          {% endif %}
+          
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+
+  <!---------Slider-------->
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="\media\images\bg11.jpg" height="550px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Welcome To C.S.N(exus)</h3>
+          <p>A network for all your needs.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\media\images\ntw.jpg" height="550px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>About C.S.N Network</h3>
+          <p>This portal is created by students of C.S.I.T branch of Mahatma Jyotiba Phule Rohilkhand University and its
+            sole purpose
+            is to help students in their academics by providing them the required study material.For more information
+            hit the
+            About Us section.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\media\images\feat.jpg" height="550px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Features</h3>
+          <p>C.S.N will provide you with the complete syllabus,P.D.F books, hand-written notes in P.D.F format and
+            previous year question papers
+            of B.Tech C.S.I.T branch.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\media\images\bgf.jpg" height="550px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Feedback</h3>
+          <p>For any queries you can contact us by visiting the Contact Us section.You can also write to us at
+            csnexus76@gmail.com.Your valuable feedback will be highly appreciated.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\media\images\bgt.jpg" height="550px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Thanks For Visiting</h3>
+          <p>Go forth and conquer!</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!------services SECTION-------->
+
+  <section id="services">
+    <div class="container">
+      <h1>OUR SERVICES</h1>
+      <div class="card mb-3" id="aboutdev" style="background-color:#47042b96;  margin: 25px; padding : 3px">
+        <div class="row no-gutters">
+
+          <div class="col-md-8 ">
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:25px; color: #ffffff;">P.D.F Books</h2>
+              <p
+                style="color: #ffffff; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                Books are a uniquely portable magic. <br>
+                —Stephen King <br>
+                C.S.N provides you with all your course books in P.D.F format.They are well-arranged and you will be
+                redirected to a dedicated page once you press the button below and from there you can easily download
+                them in just one click, once you sign-up. <br>
+                So what are you waiting for !? <br>
+                Go forth and conquer !
+
+
+
+
+
+              </p>
+              <a href="{% url 'pdfbooks' %}"><button type="button" class=" buttonl btn btn-lg btn-outline-warning">P.D.F.</button></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="\media\images\pdf.jpg" class="card-img" style="margin: 10px;padding-right: 1rem;">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" id="aboutdev" style="background-color:#09421996;  margin: 25px">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="\media\images\notes.jpg" class="card-img" style="margin: 10px;">
+          </div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:25px; color: #ffffff;">Notes</h2>
+              <p
+                style="color: #ffffff; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                C.S.N provides you with hand-written notes of almost all the subjects in your curriculum.You will be
+                redirected to a dedicated page once you press the button below and from there you can easily download
+                them , once you sign-up. <br>
+                -----> We prefer that you make your own notes because that will boost your comprehension and retention
+                level in a much better way. &lt;-----
+
+
+
+              </p>
+              <a href="{% url 'notes' %}"><button type="button" class=" button2 btn btn-lg btn-outline-danger">Notes</button></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card mb-3" id="aboutdev" style="background-color:#05033696;  margin: 25px">
+        <div class="row no-gutters">
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:25px; color: #ffffff;">Previous Year Questions</h2>
+              <p
+                style="color: #ffffff; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                C.S.N provides you with the previous year question papers of almost all the subjects in your
+                curriculum.You will be redirected to a dedicated page once you press the button below and from there you
+                can easily download them , once you sign-up.
+
+              </p>
+              <a href="{% url 'prevppr' %}" target="blank"><button type="button" class=" buttonl btn btn-lg btn-outline-danger">P.Y.Q</button></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="\media\images\prv.jpg" class="card-img" style="margin: 10px; padding-right: 1rem;">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" id="aboutdev" style="background-color:#635d0396;  margin: 25px">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="\media\images\sy.jpg" class="card-img" style="margin: 10px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:25px; color: #ffffff;">Syllabus</h2>
+              <p
+                style="color: #ffffff; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                C.S.N provides you with the complete official syllabus of B.Tech Computer Science of M.J.P Rohilkhand
+                University. You can easily download it from the link given below , once you sign-up.
+
+
+
+              </p>
+              <a href="{% url 'syllabus' %}" target="blank"><button type="button" class=" button2 btn btn-lg btn-outline-danger">Syllabus</button></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- About us -->
+  <section id="about">
+    <div class="container">
+      <h1>About Us</h1>
+      <div class="para">
+        <p style="text-align: center;">
+          Computer Science Nexus ( C.S.N ) is an initiative to help students in their academics by providing them the
+          required study material. <br> The C.S.N(exus) is founded by :<br>
+          <span id="imp" style="color: #3feff1; ">
+            <strong>
+              BHARAT JOSHI (19cs69) &nbsp; &nbsp; DHRUV MISHRA (19cs22) &nbsp; &nbsp; SHUBHAM BHATT
+              (19cs58)</strong></span> <br>
+          of C.S.I.T branch , M.J.P Rohilkhand University,Bareilly.
+          Here we have provided the syllabus, e-books , hand-written notes and previous year question papers for the
+          Computer Science students. <br> -----> First year students of all the other branches of B.Tech can also use
+          the above material as the curriculum is same. &lt;----- <br>
+          The curriculum is same as mentioned in the syllabus of M.J.P.R.U. and as taught in the institution . <br>
+          We hope that our combined effort will prove worthy and you all will make the best use of it. <br>
+          Best Wishes <br>
+          Team C.S.N <br>
+          R.S.V.P
+
+
+
+
+
+
+
+
+
+
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- the right side of the about section is left vacant due to we are out of ideas to fill the space  -->
+  <!-- CONTACT US -->
+  <section id="contact">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form class="contact-form" action="{% url 'contact' %}" method="post">{% csrf_token %}
+            <div class="form-group" >
+              <input type="text" class="form-control" name="contactname" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="rollno" placeholder="Roll No. (Optional)">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="contactemail" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows=4 name="contactmsg" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-warning btn-lg btn-block ">SUBMIT</button>
+          </form>
+        </div>
+        <div class="col-md-6 contact-info">
+          <div class="follow">
+            <i class="fa fa-map-marker"></i><b> Address : </b> Mahatma Jyotiba Phule Rohilkhand University,Pilibhit Bye
+            pass road Bareilly 243006, (U.P.) India.
+          </div>
+          <div class="follow">
+            <i class="fa fa-envelope"></i><b> E-mail id :</b> csnexus76@gmail.com
+          </div>
+          <div class="follow">
+            <a href="https://www.instagram.com/inside_world_26/" target="blank"><i class="fa fa-instagram" style="font-size: 18px; color: black;"></i><b style="color: black;">Dhruv Mishra  </b></a>
+            <a href="https://www.instagram.com/printf_happiness/" target="blank"><i class="fa fa-instagram" style="font-size: 18px; color: black;"></i><b style="color: black;">Shubham Bhatt  </b></a>
+            <a href="https://www.instagram.com/grindelwald_26/" target="blank"><i class="fa fa-instagram" style="font-size: 18px; color: black;"></i><b style="color: black;">Bharat Joshi</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!------footer------>
+  <section id="footer">
+    <div class="container text-center">
+      <p>Made with <i class="fa fa-heart-o"></i> by CSIT</p>
+    </div>
+
+    <p class="mb-0 text-center">© 2020-2021 C.S.N(exus). All Rights Reserved. </p>
+    <p class="mb-0 text-center">
+      <a href="#">Back to top</a>
+      </div>
+  </section>
+
+  <!-------scroll---->
+  <script src="\media\js\smooth-scroll.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+
+</body>
+
+</html>
